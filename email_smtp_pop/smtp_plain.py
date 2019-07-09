@@ -1,5 +1,5 @@
 import smtplib
-from email_smtp_pop.message import EmailMessage
+from email.message import EmailMessage
 
 smtp_server = 'smtp.163.com'
 from_addr = 'tedulivevideo@163.com'

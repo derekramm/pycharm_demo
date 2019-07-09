@@ -1,5 +1,5 @@
 import smtplib
-from email_smtp_pop.message import EmailMessage
+from email.message import EmailMessage
 
 smtp_server = 'smtp.163.com'
 from_addr = 'tedulivevideo@163.com'
@@ -11,7 +11,7 @@ conn.set_debuglevel(1)
 conn.login(from_addr, password)
 
 msg = EmailMessage()
-msg.set_content('你好，这是一封来自Python的邮件', 'plain', 'utf-8')
+msg.set_content('<h2>邮件标题</h2><p>你好，这是一封来自Python的邮件</p>', 'html', 'utf-8')
 msg['subject'] = '一封邮件'
 msg['from'] = f'domkn <{from_addr}>'
 msg['to'] = f'大蜥蜴 <{to_addr}>'
